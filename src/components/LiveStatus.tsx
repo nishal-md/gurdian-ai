@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Activity, ShieldCheck, AlertTriangle, Cpu, Globe, Zap, TERMINAL, Terminal } from 'lucide-react';
+import { Activity, ShieldCheck, AlertTriangle, Cpu, Globe, Zap, Terminal } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const LOG_MESSAGES = [
