@@ -31,7 +31,7 @@ export default function ProblemsSection() {
             <div className="space-y-6">
               {[
                 { icon: AlertCircle, title: 'Incredibly Slow', desc: 'Manual review takes hours, while threats propagate in milliseconds.' },
-                { icon: TrendingDown, title: 'Prohibitives Expensive', desc: 'Scaling human teams for 24/7 coverage drains resources and focus.' },
+                { icon: TrendingDown, title: 'Prohibitively Expensive', desc: 'Scaling human teams for 24/7 coverage drains resources and focus.' },
                 { icon: ShieldAlert, title: 'Highly Risky', desc: 'Human error leads to missed threats and significant platform liability.' }
               ].map((item, i) => (
                 <div key={i} className="flex gap-5 p-6 bg-red-50/50 border border-red-100 rounded-2xl">
