@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Merriweather", serif;
+  
+  --color-background: #FFFFFF;
+  --color-section: #F8FAFC;
+  --color-nav: #0B1F3A;
+  --color-card: #EEF2F7;
+  --color-border: #CBD5E1;
+  --color-card-border: #E2E8F0;
+  
+  --color-primary-navy: #0B1F3A;
+  --color-primary-navy-hover: #0F2A4D;
+  --color-accent-blue: #2563EB;
+  
+  --color-text-heading: #0F172A;
+  --color-text-body: #334155;
+  --color-text-secondary: #64748B;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-body font-sans antialiased selection:bg-accent-blue/10 selection:text-accent-blue;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-heading font-sans;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border-b border-border/50;
+  }
+  
+  .navy-glass {
+    @apply bg-primary-navy/95 backdrop-blur-md;
+  }
+  
+  .glow-blue {
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .inner-panel-shadow {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .system-label {
+    @apply text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-text-secondary;
+  }
+  
+  .text-ai-highlight {
+    @apply text-accent-blue font-semibold;
+  }
+
+  @keyframes flow {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  .animate-flow {
+    background: linear-gradient(90deg, transparent, var(--color-accent-blue), transparent);
+    background-size: 200% 100%;
+    animation: flow 4s linear infinite;
+    opacity: 0.3;
+  }
+}
