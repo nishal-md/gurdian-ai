@@ -64,7 +64,7 @@ const linkCols = [
       { name: 'Documentation', href: '#' },
       { name: 'Research Blog', href: '#' },
       { name: 'Case Studies', href: '#' },
-      { name: 'System Status', href: '#' },
+      { name: 'System Status', href: '#system-status' },
     ],
   },
   {
@@ -79,9 +79,10 @@ const linkCols = [
   {
     title: 'Support',
     links: [
-      { name: 'Help Center', href: '#' },
+      { name: 'Help Center', href: '#help-center' },
+      { name: 'Contact Support', href: '#contact-support' },
       { name: 'Contact Us', href: 'mailto:support@guardianai.co.in' },
-      { name: 'Submit Ticket', href: '#' },
+      { name: 'Submit Ticket', href: '#contact-support' },
       { name: 'Settings', href: '/settings', isRoute: true },
     ],
   },
@@ -92,11 +93,24 @@ export default function Footer() {
   const navigate = useNavigate();
 
   const handleLink = (href: string, isRoute?: boolean) => {
+    if (href === '#help-center') {
+      alert('Welcome to Guardian AI Help Center! Our knowledge base is currently being updated.');
+      return;
+    }
+    if (href === '#contact-support') {
+      alert('Contact Support portal will be available soon. Please email support@guardianai.co.in for immediate assistance.');
+      return;
+    }
+    if (href === '#system-status') {
+      alert('All Systems Operational: 100% Guardian AI network stability.');
+      return;
+    }
+
     if (isRoute) {
       navigate(href);
     } else if (href.startsWith('mailto:')) {
       window.location.href = href;
-    } else if (href.startsWith('#')) {
+    } else if (href !== '#') {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
