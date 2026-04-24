@@ -43,28 +43,31 @@ const linkCols = [
   {
     title: 'Product',
     links: [
+      { name: 'Modules', href: '#platform' },
       { name: 'Dashboard', href: '/settings' , isRoute: true },
       { name: 'Pricing', href: '#pricing' },
-      { name: 'Integrations', href: '#' },
       { name: 'API Docs', href: '#' },
+      { name: 'System Status', href: '#system-status' },
     ],
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'Enterprise', href: '#' },
-      { name: 'Startups', href: '#' },
-      { name: 'Communities', href: '#' },
-      { name: 'Agencies', href: '#' },
+      { name: 'Social Media', href: '#' },
+      { name: 'Marketplaces', href: '#' },
+      { name: 'Gaming Apps', href: '#' },
+      { name: 'For Startups', href: '#' },
+      { name: 'For Enterprise', href: '#' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Company',
     links: [
-      { name: 'Documentation', href: '#' },
+      { name: 'About Us', href: '#' },
+      { name: 'Careers', href: '#' },
       { name: 'Research Blog', href: '#' },
       { name: 'Case Studies', href: '#' },
-      { name: 'System Status', href: '#system-status' },
+      { name: 'Contact', href: 'mailto:info@guardianai.co.in' },
     ],
   },
   {
@@ -73,7 +76,7 @@ const linkCols = [
       { name: 'Privacy Policy', href: '/privacy', isRoute: true },
       { name: 'Terms & Conditions', href: '/terms', isRoute: true },
       { name: 'Cookie Policy', href: '#' },
-      { name: 'GDPR Compliance', href: '/privacy', isRoute: true },
+      { name: 'GDPR / Compliance', href: '/privacy', isRoute: true },
     ],
   },
   {
@@ -81,9 +84,8 @@ const linkCols = [
     links: [
       { name: 'Help Center', href: '#help-center' },
       { name: 'Contact Support', href: '#contact-support' },
-      { name: 'Contact Us', href: 'mailto:support@guardianai.co.in' },
-      { name: 'Submit Ticket', href: '#contact-support' },
-      { name: 'Settings', href: '/settings', isRoute: true },
+      { name: 'Technical Docs', href: '#' },
+      { name: 'API Reference', href: '#' },
     ],
   },
 ];

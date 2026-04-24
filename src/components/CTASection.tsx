@@ -19,7 +19,8 @@ export default function CTASection() {
             <span className="text-[10px] font-bold text-accent-blue tracking-[0.2em] uppercase">Enterprise Ready</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-navy">
-            Start protecting your platform.
+            Ready to Secure & Scale with AI? <br />
+            <span className="text-accent-blue">Book a Demo Today.</span>
           </h2>
           <p className="text-text-body text-lg max-w-xl mx-auto leading-relaxed">
             Deploy Guardian AI in minutes. Secure your digital supply chain with autonomous intelligence and <span className="text-ai-highlight">SaaS simplicity</span>.

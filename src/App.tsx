@@ -8,14 +8,10 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhySection from './components/WhySection';
-import ProcessFlow from './components/ProcessFlow';
 import Modules from './components/Modules';
 import LiveStatus from './components/LiveStatus';
-import StatsSection from './components/StatsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import PricingSection from './components/PricingSection';
-import PrivacySummary from './components/PrivacySummary';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import TermsPage from './pages/TermsPage';
@@ -23,6 +19,10 @@ import GlobalBackground from './components/GlobalBackground';
 
 import SettingsPage from './pages/SettingsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+
+import TrustedLogos from './components/TrustedLogos';
+import ProblemsSection from './components/ProblemsSection';
+import UseCases from './components/UseCases';
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -42,12 +42,11 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <StatsSection />
-        <WhySection />
-        <ProcessFlow />
+        <TrustedLogos />
+        <ProblemsSection />
         <Modules />
         <LiveStatus />
-        <PrivacySummary />
+        <UseCases />
         <TestimonialsSection />
         <PricingSection />
         <CTASection />

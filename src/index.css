@@ -8,18 +8,21 @@
   
   --color-background: #FFFFFF;
   --color-section: #F8FAFC;
+  --color-section-dark: #0B1F3A;
   --color-nav: #0B1F3A;
-  --color-card: #EEF2F7;
-  --color-border: #CBD5E1;
+  --color-card: #FFFFFF;
+  --color-border: #E2E8F0;
   --color-card-border: #E2E8F0;
   
   --color-primary-navy: #0B1F3A;
   --color-primary-navy-hover: #0F2A4D;
   --color-accent-blue: #2563EB;
+  --color-steel-grey: #64748B;
   
   --color-text-heading: #0F172A;
   --color-text-body: #334155;
   --color-text-secondary: #64748B;
+  --color-text-on-navy: #CBD5E1;
 }
 
 @layer base {

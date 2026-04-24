@@ -22,7 +22,7 @@ export default function Hero() {
             <span className="text-[10px] font-bold text-accent-blue tracking-[0.2em] uppercase">Status: System Operational</span>
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary-navy leading-[1.05] mb-8">
-            THE <span className="text-accent-blue">AI-DRIVEN</span> SHIELD FOR ADVERTISING
+            AI-Powered Safety, <span className="text-accent-blue">Moderation & Intelligence</span> for Modern Platforms
           </h1>
         </motion.div>
 
@@ -30,9 +30,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-text-body max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-text-body max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Real-time intelligence to detect, assess, and act on digital threats. Secure your platform with <span className="text-ai-highlight">precision and authority</span>.
+          Protect communities, monitor threats, enforce policy, and grow smarter with one <span className="text-ai-highlight">unified AI operating system</span>.
         </motion.p>
 
         <motion.div

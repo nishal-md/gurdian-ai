@@ -70,18 +70,18 @@ export default function LiveStatus() {
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-xl font-bold tracking-tight text-primary-navy">Security Dashboard</h3>
+                  <h3 className="text-xl font-bold tracking-tight text-primary-navy">Enterprise Dashboard Preview</h3>
                   <div className="flex items-center gap-1.5 px-2 py-0.5 bg-green-500/10 border border-green-500/20 rounded-full">
                     <motion.div 
                       animate={{ opacity: [1, 0.4, 1] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                       className="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.4)]"
                     />
-                    <span className="text-[10px] font-bold text-green-600 tracking-wider">SECURE</span>
+                    <span className="text-[10px] font-bold text-green-600 tracking-wider">LIVE_FEED</span>
                   </div>
                 </div>
                 <p className="system-label text-accent-blue font-bold">
-                  All systems synchronized • v.4.92.0
+                  Live Threat Feed • Analytics Reports • Policy Violations Center
                 </p>
               </div>
             </div>
@@ -89,11 +89,11 @@ export default function LiveStatus() {
             <div className="flex items-center gap-10">
               <div className="text-right">
                 <p className="system-label mb-1">
-                  Network Integrity
+                  Brand Safety Scanner
                 </p>
                 <div className="flex items-center justify-end gap-2 text-green-600 font-bold">
                   <Activity className="w-4 h-4" />
-                  99.98%
+                  ACTIVE
                 </div>
               </div>
               <div className="h-10 w-px bg-border/30" />
@@ -119,7 +119,7 @@ export default function LiveStatus() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Cpu className="w-3 h-3 text-text-secondary" />
-                    <span className="system-label">EVENTS PROCESSED</span>
+                    <span className="system-label">ANALYTICS REPORTS GENERATED</span>
                   </div>
                   <div>
                     <p className="text-3xl font-bold tracking-tighter text-primary-navy mb-2">14,802,941</p>
@@ -137,7 +137,7 @@ export default function LiveStatus() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <AlertTriangle className="w-3 h-3 text-text-secondary" />
-                    <span className="system-label">THREAT SUPPRESSION</span>
+                    <span className="system-label">POLICY VIOLATIONS BLOCKED</span>
                   </div>
                   <div>
                     <p className="text-3xl font-bold tracking-tighter text-primary-navy mb-2">100%</p>
@@ -158,7 +158,7 @@ export default function LiveStatus() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Activity className="w-3 h-3 text-text-secondary" />
-                    <span className="system-label">LIVE SIGNAL INTERCEPTION</span>
+                    <span className="system-label">THREAT DETECTION FEED</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
@@ -182,11 +182,17 @@ export default function LiveStatus() {
 
             {/* Sidebar with Console */}
             <div className="space-y-6">
-              <LiveConsole />
+              <div className="bg-primary-navy/90 rounded-lg p-4 font-mono text-[10px] text-accent-blue/80 h-32 overflow-hidden border border-white/5 inner-panel-shadow">
+                <div className="flex items-center gap-2 mb-2 text-white/40 border-b border-white/5 pb-1 uppercase tracking-widest text-[8px]">
+                  <Terminal className="w-2 h-2" />
+                  Live Threat logs
+                </div>
+                <LiveConsole />
+              </div>
               <div className="p-5 bg-white border border-card-border rounded-lg soft-shadow inner-panel-shadow">
                 <div className="flex items-center gap-2 mb-4">
                   <Zap className="w-4 h-4 text-accent-blue" />
-                  <span className="system-label">NODE RESOURCE USAGE</span>
+                  <span className="system-label">SYSTEM SCANNER STATUS</span>
                 </div>
                 <div className="space-y-4">
                   {[
