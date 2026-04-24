@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { ShieldAlert, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <motion.section 
       initial={{ opacity: 0 }}
@@ -39,11 +41,19 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button id="cta-start" className="w-full sm:w-auto bg-primary-navy hover:bg-primary-navy-hover hover:scale-[1.03] text-white px-8 py-4 rounded-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 soft-shadow group">
+          <button 
+            id="cta-start" 
+            onClick={() => navigate('/settings')}
+            className="w-full sm:w-auto bg-primary-navy hover:bg-primary-navy-hover hover:scale-[1.03] text-white px-8 py-4 rounded-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 soft-shadow group"
+          >
             <ShieldAlert className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Start Analyzing
           </button>
-          <button id="cta-demo" className="w-full sm:w-auto border-2 border-border hover:bg-section hover:scale-[1.03] text-primary-navy px-8 py-4 rounded-sm font-bold transition-all duration-300 flex items-center justify-center gap-2">
+          <button 
+            id="cta-demo" 
+            onClick={() => { const el = document.getElementById('pricing'); el?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="w-full sm:w-auto border-2 border-border hover:bg-section hover:scale-[1.03] text-primary-navy px-8 py-4 rounded-sm font-bold transition-all duration-300 flex items-center justify-center gap-2"
+          >
             <Play className="w-4 h-4 fill-current" />
             Watch Demo
           </button>

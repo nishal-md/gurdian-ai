@@ -23,8 +23,28 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-text-body font-sans antialiased selection:bg-accent-blue/10 selection:text-accent-blue;
+    /* Premium Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent-blue) var(--color-section);
+  }
+
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--color-section);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--color-accent-blue);
+    border-radius: 10px;
   }
   
   h1, h2, h3, h4, h5, h6 {

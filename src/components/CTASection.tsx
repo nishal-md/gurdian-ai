@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CTASection() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-32 relative overflow-hidden bg-section">
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -29,7 +32,10 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <button className="bg-primary-navy hover:bg-primary-navy-hover hover:scale-[1.03] text-white px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto soft-shadow shadow-primary-navy/20">
+          <button 
+            onClick={() => navigate('/settings')}
+            className="bg-primary-navy hover:bg-primary-navy-hover hover:scale-[1.03] text-white px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto soft-shadow shadow-primary-navy/20"
+          >
             Get Technical Briefing
             <ArrowRight className="w-5 h-5" />
           </button>
